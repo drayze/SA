@@ -4,12 +4,16 @@
 #get Random
 import random
 
+#Responses to be selected and used at random
 Response = ["I'm rubber you're glue. What you say bounces off me and sticks to you.", "I know you are but what am I?", "Is that your face or your underwear?",
             "That uni-brow keeps the Sun out of your eyes, doesn't it?", "Your so ugly, your parents got divorced.", "I hear your Momma calling!", 
             "You're just like your father, short in height and intellect.", "Was that it? Are a vegetable?", "Wait let me dumb it down for you.....DUMB-ASS.",
             "Is that your breath or did someone fart?", "WHAT!  ARE YOU CRYING? There's no crying in $h*t talking!", 
             "Well I was down at the store yesterday, and guess what I saw...Your sister working the corner!", "Where did you go to school? The Prestigious Academy of Dumb as a Bag of Hammers?",
             ]
+
+#learning array captures users input for future use
+learning = []
 
 #opening header
 print("\nWelcome to your demise, Loser.\n==================\nPrepare for a war of words.\n---------------------\n")
