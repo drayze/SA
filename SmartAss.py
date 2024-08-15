@@ -36,6 +36,12 @@ while True:
         scoreboard += 20
         print(f"Your Score: {scoreboard}")
         
+#advancing the scoring model
+    retest = first_try.lower()
+    search_for_points = list(retest)
+    
+    print(search_for_points)
+
 #over the top response
     #for i in first_try:
         #print("You lose!\n")
