@@ -29,9 +29,9 @@ while True:
 
 #function to gather user input and transfer it to Learning
     retest = first_try.lower()
-    userInput = list(retest)
-    Learning + userInput
-    #print(Learning)
+    #userInput = list(retest)
+    Learning.append(retest)
+    print(Learning)
 
 #scoring model
     check_for_points = len(first_try)
