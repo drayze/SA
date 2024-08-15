@@ -13,7 +13,7 @@ Response = ["I'm rubber you're glue. What you say bounces off me and sticks to y
             ]
 
 #learning array captures users input for future use
-learning = []
+Learning = []
 
 #opening header
 print("\nWelcome to your demise, Loser.\n==================\nPrepare for a war of words.\n---------------------\n")
@@ -26,6 +26,12 @@ while True:
 
 #the function of the program
     first_try = input("\nWell don't leave us waiting forever Genius. ")
+
+#function to gather user input and transfer it to Learning
+    retest = first_try.lower()
+    userInput = list(retest)
+    Learning + userInput
+    #print(Learning)
 
 #scoring model
     check_for_points = len(first_try)
