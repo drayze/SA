@@ -21,7 +21,7 @@ while True:
     print(f"Your Score: {scoreboard}")
 
 #the function of the program
-    first_try = input("\nWell don't leave us waiting forever Genius.\n:: \n")
+    first_try = input("\nWell don't leave us waiting forever Genius.\n:: ")
 
 #scoring model
     check_for_points = len(first_try)
@@ -59,6 +59,11 @@ while True:
         
     if "z" in first_try:
         print("YOU WIN, FUCKFACE!")
+        break
+    elif scoreboard >= 501:
+        print("You have endured enough abuse to level up!\n")
+        print(random.choice(Response))
+        print(f"Your score is: {scoreboard}\nYOU WIN FOR NOW.....\n")
         break
     else:
         print(random.choice(Response))
