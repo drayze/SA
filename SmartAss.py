@@ -21,21 +21,38 @@ while True:
     print(f"Your Score: {scoreboard}")
 
 #the function of the program
-    first_try = input("\nWell don't leave us waiting forever Genius. ")
+    first_try = input("\nWell don't leave us waiting forever Genius.\n:: ")
 
 #scoring model
     check_for_points = len(first_try)
 
     if check_for_points < 15:
         scoreboard += 3
-        print(f"Your Score: {scoreboard}")
+        #print(f"Your Score: {scoreboard}")
     elif check_for_points >=16 and check_for_points <= 29:
         scoreboard += 10
-        print(f"Your Score: {scoreboard}")
+        #print(f"Your Score: {scoreboard}")
     elif check_for_points >= 30:
         scoreboard += 20
-        print(f"Your Score: {scoreboard}")
+        #print(f"Your Score: {scoreboard}")
         
+#advancing the scoring model
+    retest = first_try.lower()
+    search_for_points = list(retest)
+    
+    for i in search_for_points:
+        
+        if i == "?":
+            scoreboard += 5
+        elif i == ",":
+            scoreboard += 7
+        elif i == ".":
+            scoreboard += 3
+        elif i == "'":
+            scoreboard += 12
+        
+    print(f"Your Score: {scoreboard}")
+    
 #over the top response
     #for i in first_try:
         #print("You lose!\n")
@@ -43,8 +60,13 @@ while True:
     if "z" in first_try:
         print("YOU WIN, FUCKFACE!")
         break
+    elif scoreboard >= 501:
+        print("You have endured enough abuse to level up!\n")
+        print(random.choice(Response))
+        print(f"Your score is: {scoreboard}\nYOU WIN FOR NOW.....\n")
+        break
     else:
-        print("YOU LOSE!\n")
+        print(random.choice(Response))
         
     print(random.choice(Response))
     play_again = input("Want to try again? Y or N \n====================\n")
@@ -52,6 +74,7 @@ while True:
     play_again = play_again.upper()    
     
     if play_again == "N":
+        print(f"Your Final Score: {scoreboard}")
         break
     
 #return data
