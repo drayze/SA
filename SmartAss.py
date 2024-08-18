@@ -16,6 +16,9 @@ print("\nWelcome to your demise, Loser.\n==================\nPrepare for a war o
 
 scoreboard = 0
 
+#Set True variable
+#PlayGame = True
+#Start loop
 while True:
     
     print(f"Your Score: {scoreboard}")
@@ -23,6 +26,11 @@ while True:
 #the function of the program
     first_try = input("\nWell don't leave us waiting forever Genius.\n:: ")
 
+#check if first_try is a repeat
+    if first_try in Response:
+        print(f"HA! I've heard that before!\nYour Final Score is: {scoreboard}")
+        break
+        
 #scoring model
     check_for_points = len(first_try)
 
