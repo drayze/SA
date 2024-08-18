@@ -4,6 +4,9 @@
 #get Random
 import random
 
+#link to new_Responses.txt
+#import new_Responses
+
 #Responses to be selected and used at random
 Response = ["I'm rubber you're glue. What you say bounces off me and sticks to you.", "I know you are but what am I?", "Is that your face or your underwear?",
             "That uni-brow keeps the Sun out of your eyes, doesn't it?", "Your so ugly, your parents got divorced.", "I hear your Momma calling!", 
@@ -27,6 +30,11 @@ while True:
 #the function of the program
     first_try = input("\nWell don't leave us waiting forever Genius. ")
 
+#Write user input to Learning.txt
+    file = open("new_Responses.txt", "a")
+    file.write(first_try)
+    file.close()
+    
 #function to gather user input and transfer it to Learning
     retest = first_try.lower()
     #userInput = list(retest)
