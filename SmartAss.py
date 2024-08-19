@@ -4,6 +4,9 @@
 #get Random
 import random
 
+#import json
+import json
+
 #link to new_Responses.txt
 #import new_Responses
 
@@ -31,9 +34,9 @@ while True:
     first_try = input("\nWell don't leave us waiting forever Genius. ")
 
 #Write user input to Learning.txt
-    file = open("new_Responses.txt", "a")
-    file.write(first_try)
-    file.close()
+    with open("new_Responses.json") as file:
+        json.dump(first_try, file)
+        file.close()
     
 #function to gather user input and transfer it to Learning
     retest = first_try.lower()
