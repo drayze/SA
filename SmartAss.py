@@ -34,9 +34,9 @@ while True:
     first_try = input("\nWell don't leave us waiting forever Genius. ")
 
 #Write user input to Learning.txt
-    with open("new_Responses.json") as file:
-        json.dump(first_try, file)
-        file.close()
+    file = open("new_Responses.txt", "a")
+    file.write(f'"{first_try}", ')
+    file.close()
     
 #function to gather user input and transfer it to Learning
     retest = first_try.lower()
@@ -56,7 +56,7 @@ while True:
     elif check_for_points >= 30:
         scoreboard += 20
         print(f"Your Score: {scoreboard}")
-        
+    print(random.choice(Learning))    
 #over the top response
     #for i in first_try:
         #print("You lose!\n")
