@@ -63,7 +63,7 @@ while True:
         
 #Pull a random response from new_Responses
     with open("new_Responses.csv") as NewR:
-        NewComeBack = csv.DictReader(NewR)
+        NewComeBack = csv.reader(NewR)
         
         for row in NewComeBack:
             Learning.append(row)
