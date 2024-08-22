@@ -4,8 +4,8 @@
 #get Random
 import random
 
-#import json
-import json
+#Import csv
+import csv
 
 #link to new_Responses.txt
 #import new_Responses
