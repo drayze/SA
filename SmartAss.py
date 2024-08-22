@@ -39,10 +39,10 @@ while True:
     file.close()
     
 #function to gather user input and transfer it to Learning
-    retest = first_try.lower()
+    #retest = first_try.lower()
     #userInput = list(retest)
-    Learning.append(retest)
-    print(Learning)
+    #Learning.append(retest)
+    #print(Learning)
 
 #scoring model
     check_for_points = len(first_try)
@@ -56,16 +56,23 @@ while True:
     elif check_for_points >= 30:
         scoreboard += 20
         print(f"Your Score: {scoreboard}")
-    print(random.choice(Learning))    
+    #print(random.choice(Learning))    
 #over the top response
     #for i in first_try:
         #print("You lose!\n")
         
 #Pull a random response from new_Responses
-    #open("new_Responses.csv", "r")
-    #NewComeBack = file.read(random.choice(file))
+    with open("new_Responses.csv") as NewR:
+        NewComeBack = csv.DictReader(NewR)
+        
+        for row in NewComeBack:
+            Learning.append(row)
+    
+    print(random.choice(Learning))
+    
+    #file.read(random.choice(file))
     #file.close()
-    #print(NewComeBack)
+        #print(Cback)
     
     if "z" in first_try:
         print("YOU WIN, FUCKFACE!")
