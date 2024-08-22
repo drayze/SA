@@ -34,8 +34,8 @@ while True:
     first_try = input("\nWell don't leave us waiting forever Genius. ")
 
 #Write user input to Learning.txt
-    file = open("new_Responses.txt", "a")
-    file.write(f'"{first_try}", ')
+    file = open("new_Responses.csv", "a")
+    file.write(f'"{first_try}",\n')
     file.close()
     
 #function to gather user input and transfer it to Learning
@@ -61,6 +61,12 @@ while True:
     #for i in first_try:
         #print("You lose!\n")
         
+#Pull a random response from new_Responses
+    #open("new_Responses.csv", "r")
+    #NewComeBack = file.read(random.choice(file))
+    #file.close()
+    #print(NewComeBack)
+    
     if "z" in first_try:
         print("YOU WIN, FUCKFACE!")
         break
