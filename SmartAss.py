@@ -1,6 +1,11 @@
 #Sarcasm Empire
 #Providing a battle field for a war of words
 
+
+#-------------------------------/////////////////////////////--------------------------------------------
+#############  LEVEL TWO  ########################
+
+
 #get Random
 import random
 
@@ -12,7 +17,7 @@ Response = ["I'm rubber you're glue. What you say bounces off me and sticks to y
             ]
 
 #opening header
-print("\nWelcome to your demise, Loser.\n==================\nPrepare for a war of words.\n---------------------\n")
+print("\nWelcome to Level 2, Loser.\n==================\nPrepare for a war of words.\n---------------------\n")
 
 scoreboard = 0
 
@@ -24,7 +29,7 @@ while True:
     print(f"Your Score: {scoreboard}")
 
 #the function of the program
-    first_try = input("\nWell don't leave us waiting forever Genius.\n:: ")
+    first_try = input("\nYou know how this goes.\nOn with it, Dumb-ass\n:: ")
 
 #check if first_try is a repeat
     if first_try in Response:
