@@ -63,8 +63,20 @@ while True:
     search_for_points = list(retest)
     
     for i in search_for_points:
-        
-        if i == "?":
+        if i != "?" and i != ".":
+            print("Your punctuation needs work.\nAre you old smart enough for this game?")
+            scoreboard -= 25
+            print(f"You lose 25 points!\nYour Score: {scoreboard}")
+            print(random.choice(Response))
+            play_again = input("Want to try again? Y or N \n====================\n")
+#Make play_again uppercase
+            play_again = play_again.upper()    
+    
+            if play_again == "N":
+                print(f"Your Final Score: {scoreboard}")
+                break
+            
+        elif i == "?":
             scoreboard += 12
         elif i == ",":
             scoreboard += 12
