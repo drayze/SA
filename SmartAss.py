@@ -40,7 +40,16 @@ while True:
     check_for_points = len(first_try)
 
     if check_for_points < 15:
-        scoreboard += 5
+        print(f"Your feeble attempt is too short\n")
+        print(random.choice(Response))
+        play_again = input("Want to try again? Y or N \n====================\n")
+#Make play_again uppercase
+        play_again = play_again.upper()    
+    
+        if play_again == "N":
+            print(f"Your Final Score: {scoreboard}")
+            break
+        
         #print(f"Your Score: {scoreboard}")
     elif check_for_points >=16 and check_for_points <= 29:
         scoreboard += 10
