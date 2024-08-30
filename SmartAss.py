@@ -40,13 +40,13 @@ while True:
     check_for_points = len(first_try)
 
     if check_for_points < 15:
-        scoreboard += 3
+        scoreboard += 5
         #print(f"Your Score: {scoreboard}")
     elif check_for_points >=16 and check_for_points <= 29:
         scoreboard += 10
         #print(f"Your Score: {scoreboard}")
     elif check_for_points >= 30:
-        scoreboard += 20
+        scoreboard += 15
         #print(f"Your Score: {scoreboard}")
         
 #advancing the scoring model
