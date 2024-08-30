@@ -75,10 +75,10 @@ while True:
     #for i in first_try:
         #print("You lose!\n")
         
-    if "z" in first_try:
+    if "|" in first_try:
         print("YOU WIN, FUCKFACE!")
         break
-    elif scoreboard >= 501:
+    elif scoreboard >= 1001:
         print("You have endured enough abuse to level up!\n")
         print(random.choice(Response))
         print(f"Your score is: {scoreboard}\nYOU WIN FOR NOW.....\n")
