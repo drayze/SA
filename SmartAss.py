@@ -56,11 +56,11 @@ while True:
     for i in search_for_points:
         
         if i == "?":
-            scoreboard += 5
+            scoreboard += 12
         elif i == ",":
-            scoreboard += 7
+            scoreboard += 12
         elif i == ".":
-            scoreboard += 3
+            scoreboard += 12
         elif i == "'":
             scoreboard += 12
         
