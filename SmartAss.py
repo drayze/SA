@@ -1,6 +1,8 @@
 #Sarcasm Empire
 #Providing a battle field for a war of words
 
+
+
 #get Random
 import random
 
@@ -72,7 +74,12 @@ while True:
         print("You have endured enough abuse to level up!\n")
         print(random.choice(Response))
         print(f"Your score is: {scoreboard}\nYOU WIN FOR NOW.....\n")
-        break
+        
+        #Accessing the next level
+        import SA_level2
+        
+        with open(SA_level2) as f:
+            exec(f.read())
     else:
         print(random.choice(Response))
         
