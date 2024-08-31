@@ -2,8 +2,8 @@
 #Providing a battle field for a war of words
 
 
-#-------------------------------/////////////////////////////--------------------------------------------
-#############  LEVEL TWO  ########################
+###################################################################################
+#------------------  LEVEL 1  ------------------------------------------------
 
 
 #get Random
@@ -17,7 +17,7 @@ Response = ["I'm rubber you're glue. What you say bounces off me and sticks to y
             ]
 
 #opening header
-print("\nWelcome to Level 2, Loser.\n==================\nPrepare for a war of words.\n---------------------\n")
+print("\nWelcome to your demise, Loser.\n==================\nPrepare for a war of words.\n---------------------\n")
 
 scoreboard = 0
 
@@ -29,7 +29,7 @@ while True:
     print(f"Your Score: {scoreboard}")
 
 #the function of the program
-    first_try = input("\nYou know how this goes.\nOn with it, Dumb-ass\n:: ")
+    first_try = input("\nWell don't leave us waiting forever Genius.\n:: ")
 
 #check if first_try is a repeat
     if first_try in Response:
@@ -40,17 +40,13 @@ while True:
     check_for_points = len(first_try)
 
     if check_for_points < 15:
-        print(f"Your feeble attempt is too short\n")
-        print(random.choice(Response))
-        scoreboard -= 10
-        print("You lose 10 points!\n")
-        pass
+        scoreboard += 3
         #print(f"Your Score: {scoreboard}")
     elif check_for_points >=16 and check_for_points <= 29:
         scoreboard += 10
         #print(f"Your Score: {scoreboard}")
     elif check_for_points >= 30:
-        scoreboard += 15
+        scoreboard += 20
         #print(f"Your Score: {scoreboard}")
         
 #advancing the scoring model
@@ -60,14 +56,13 @@ while True:
     for i in search_for_points:
         
         if i == "?":
-            scoreboard += 12
+            scoreboard += 5
         elif i == ",":
-            scoreboard += 12
+            scoreboard += 7
         elif i == ".":
-            scoreboard += 12
+            scoreboard += 3
         elif i == "'":
             scoreboard += 12
-      
         
     print(f"Your Score: {scoreboard}")
     
@@ -75,10 +70,10 @@ while True:
     #for i in first_try:
         #print("You lose!\n")
         
-    if "|" in first_try:
+    if "z" in first_try:
         print("YOU WIN, FUCKFACE!")
         break
-    elif scoreboard >= 1001:
+    elif scoreboard >= 501:
         print("You have endured enough abuse to level up!\n")
         print(random.choice(Response))
         print(f"Your score is: {scoreboard}\nYOU WIN FOR NOW.....\n")
@@ -89,8 +84,7 @@ while True:
     print(random.choice(Response))
     play_again = input("Want to try again? Y or N \n====================\n")
 #Make play_again uppercase
-    play_again = play_again.upper()
-    #play_again = play_again + "."    
+    play_again = play_again.upper()    
     
     if play_again == "N":
         print(f"Your Final Score: {scoreboard}")
